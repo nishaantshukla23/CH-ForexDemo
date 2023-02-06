@@ -1,2 +1,1 @@
 # CH-ForexDemo
-# CH-ForexDemo
