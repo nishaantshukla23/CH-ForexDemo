@@ -11,7 +11,7 @@ import Foundation
 public final class ForexManager {
     
     // MARK: Public Interface
-    public static let shared = MAuthManager()
+    public static let shared = ForexManager()
     //temporary function
     func testSDKAcces() {
         let alert = UIAlertController(title: "Hello, I am ForexSDK", message: "you got the access.", preferredStyle: UIAlertControllerStyle.Alert)
