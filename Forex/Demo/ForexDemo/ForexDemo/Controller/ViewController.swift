@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ForexSDK
 
 class ViewController: UIViewController {
     
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         titleArray.count
     }
@@ -31,4 +32,10 @@ extension ViewController: UITableViewDataSource {
         cell.setUpcell(name: titleArray[indexPath.row])
         return cell
     }
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        ForexManager.shared.testSDKAcces()
+    }
+
+    
 }

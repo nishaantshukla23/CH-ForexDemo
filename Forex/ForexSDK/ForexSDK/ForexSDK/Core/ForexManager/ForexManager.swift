@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 public final class ForexManager {
@@ -13,9 +14,11 @@ public final class ForexManager {
     // MARK: Public Interface
     public static let shared = ForexManager()
     //temporary function
-    func testSDKAcces() {
-        let alert = UIAlertController(title: "Hello, I am ForexSDK", message: "you got the access.", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+    public func testSDKAcces() {
+        let alert = UIAlertController(title: "Hello, I am ForexSDK", message: "you got the access.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+        let window = UIApplication.shared.windows.first
+        let controller = window?.rootViewController
+        controller?.present(alert, animated: true)
     }
 }

@@ -13,6 +13,7 @@
 		EF6F1775299A0CFF00C0ED65 /* ForexDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F1774299A0CFF00C0ED65 /* ForexDemoTests.swift */; };
 		EF6F177F299A0CFF00C0ED65 /* ForexDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F177E299A0CFF00C0ED65 /* ForexDemoUITests.swift */; };
 		EF6F1781299A0CFF00C0ED65 /* ForexDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F1780299A0CFF00C0ED65 /* ForexDemoUITestsLaunchTests.swift */; };
+		EF6F17C4299A421D00C0ED65 /* ForexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6F17C0299A420F00C0ED65 /* ForexSDK.framework */; };
 		FFB47BE1299A170D00A32934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47BDC299A170D00A32934 /* AppDelegate.swift */; };
 		FFB47BE2299A170D00A32934 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47BDD299A170D00A32934 /* SceneDelegate.swift */; };
 		FFB47BE3299A170D00A32934 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47BDF299A170D00A32934 /* ViewController.swift */; };
@@ -34,6 +35,20 @@
 			remoteGlobalIDString = EF6F1759299A0CFE00C0ED65;
 			remoteInfo = ForexDemo;
 		};
+		EF6F17BF299A420F00C0ED65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF6F17BA299A420F00C0ED65 /* ForexSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EF6F1797299A102100C0ED65;
+			remoteInfo = ForexSDK;
+		};
+		EF6F17C1299A420F00C0ED65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF6F17BA299A420F00C0ED65 /* ForexSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EF6F17A1299A102100C0ED65;
+			remoteInfo = ForexSDKTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +62,7 @@
 		EF6F177A299A0CFF00C0ED65 /* ForexDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForexDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6F177E299A0CFF00C0ED65 /* ForexDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexDemoUITests.swift; sourceTree = "<group>"; };
 		EF6F1780299A0CFF00C0ED65 /* ForexDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF6F17BA299A420F00C0ED65 /* ForexSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ForexSDK.xcodeproj; path = ../../../ForexSDK/ForexSDK/ForexSDK.xcodeproj; sourceTree = "<group>"; };
 		FFB47BDC299A170D00A32934 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB47BDD299A170D00A32934 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FFB47BDF299A170D00A32934 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6F17C4299A421D00C0ED65 /* ForexSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +102,7 @@
 				EF6F1773299A0CFF00C0ED65 /* ForexDemoTests */,
 				EF6F177D299A0CFF00C0ED65 /* ForexDemoUITests */,
 				EF6F175B299A0CFE00C0ED65 /* Products */,
+				EF6F17C3299A421D00C0ED65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +119,7 @@
 		EF6F175C299A0CFE00C0ED65 /* ForexDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EF6F17BA299A420F00C0ED65 /* ForexSDK.xcodeproj */,
 				FFB47BDB299A170D00A32934 /* Application */,
 				FFB47BDE299A170D00A32934 /* Controller */,
 				FFB47BE0299A170D00A32934 /* View */,
@@ -127,6 +146,22 @@
 				EF6F1780299A0CFF00C0ED65 /* ForexDemoUITestsLaunchTests.swift */,
 			);
 			path = ForexDemoUITests;
+			sourceTree = "<group>";
+		};
+		EF6F17BB299A420F00C0ED65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF6F17C0299A420F00C0ED65 /* ForexSDK.framework */,
+				EF6F17C2299A420F00C0ED65 /* ForexSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF6F17C3299A421D00C0ED65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FFB47BDB299A170D00A32934 /* Application */ = {
@@ -244,6 +279,12 @@
 			mainGroup = EF6F1751299A0CFE00C0ED65;
 			productRefGroup = EF6F175B299A0CFE00C0ED65 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EF6F17BB299A420F00C0ED65 /* Products */;
+					ProjectRef = EF6F17BA299A420F00C0ED65 /* ForexSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EF6F1759299A0CFE00C0ED65 /* ForexDemo */,
@@ -252,6 +293,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EF6F17C0299A420F00C0ED65 /* ForexSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ForexSDK.framework;
+			remoteRef = EF6F17BF299A420F00C0ED65 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EF6F17C2299A420F00C0ED65 /* ForexSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ForexSDKTests.xctest;
+			remoteRef = EF6F17C1299A420F00C0ED65 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EF6F1758299A0CFE00C0ED65 /* Resources */ = {
