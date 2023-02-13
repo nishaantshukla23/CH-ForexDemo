@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9E6DCA22-E7ED-4896-A531-17E5940A91F7"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E71C4FEB-5E4E-464E-96C1-806BCC8E5E83"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Forex/Demo/ForexDemo/ForexDemo/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A14BF65-C6A2-4240-A8A0-D0B9C44E8F6A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Forex/ForexSDK/ForexSDK/ForexSDK/Core/ForexManager/ForexManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ForexManager"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0A14BF65-C6A2-4240-A8A0-D0B9C44E8F6A - f33ba7d67d7716e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ForexSDK.ForexManager.testSDKAcces() -&gt; ()"
+                  moduleName = "ForexSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nshukla/Documents/Code/Coforge/HSBC/CHForexDemo/Forex/ForexSDK/ForexSDK/ForexSDK/Core/ForexManager/ForexManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "0A14BF65-C6A2-4240-A8A0-D0B9C44E8F6A - f33ba7d67d7716e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ForexSDK.ForexManager.testSDKAcces() -&gt; ()"
+                  moduleName = "ForexSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nshukla/Documents/Code/Coforge/HSBC/CHForexDemo/Forex/ForexSDK/ForexSDK/ForexSDK/Core/ForexManager/ForexManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
