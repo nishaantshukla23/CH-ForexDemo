@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var forexTableView: UITableView!
 
     // MARK: - Variables
-    let titleArray = ["Currency conversion", "Send Money", "Bill Pay", "Cards & Forex","Loans", "UPI Payments"]
+    let titleArray = ["Forex", "Send Money", "Bill Pay","Loans", "UPI Payments"]
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
