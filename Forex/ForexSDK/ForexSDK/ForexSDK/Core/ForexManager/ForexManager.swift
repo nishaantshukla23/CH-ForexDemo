@@ -16,7 +16,7 @@ public final class ForexManager {
     public static let shared = ForexManager()
     //temporary function
     public func testSDKForSwiftUI(navController: UINavigationController?) {
-        let swiftUIViewController = UIHostingController(rootView: SwiftUIView())
+        let swiftUIViewController = UIHostingController(rootView: CurrencyConverterView())
         navController?.pushViewController(swiftUIViewController, animated: true)
 
     }
