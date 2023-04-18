@@ -8,6 +8,7 @@ xcuserdata/
 *.xcuserstate
 ./idea
 Forex.xcworkspace/xcuserdata/nshukla.xcuserdatad/UserInterfaceState.xcuserstate
+Forex.xcworkspace/xcuserdata/*
 
 ## Other
 *.moved-aside

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF30948029EE63D000513C95 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30947F29EE63D000513C95 /* SwiftUIView.swift */; };
 		EF6F179C299A102100C0ED65 /* ForexSDK.docc in Sources */ = {isa = PBXBuildFile; fileRef = EF6F179B299A102100C0ED65 /* ForexSDK.docc */; };
 		EF6F17A2299A102100C0ED65 /* ForexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6F1797299A102100C0ED65 /* ForexSDK.framework */; };
 		EF6F17A7299A102100C0ED65 /* ForexSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F17A6299A102100C0ED65 /* ForexSDKTests.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF30947F29EE63D000513C95 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		EF6F1797299A102100C0ED65 /* ForexSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForexSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6F179A299A102100C0ED65 /* ForexSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForexSDK.h; sourceTree = "<group>"; };
 		EF6F179B299A102100C0ED65 /* ForexSDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ForexSDK.docc; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF30947E29EE63C000513C95 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EF30947F29EE63D000513C95 /* SwiftUIView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		EF6F178D299A102100C0ED65 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 		EF6F1799299A102100C0ED65 /* ForexSDK */ = {
 			isa = PBXGroup;
 			children = (
+				EF30947E29EE63C000513C95 /* UI */,
 				EF6F17B1299A1A5300C0ED65 /* Core */,
 				EF6F179A299A102100C0ED65 /* ForexSDK.h */,
 				EF6F179B299A102100C0ED65 /* ForexSDK.docc */,
@@ -226,6 +237,7 @@
 			files = (
 				EF6F17B7299A1B3500C0ED65 /* ForexConfig.swift in Sources */,
 				EF6F17B5299A1AC000C0ED65 /* ForexManager.swift in Sources */,
+				EF30948029EE63D000513C95 /* SwiftUIView.swift in Sources */,
 				EF6F179C299A102100C0ED65 /* ForexSDK.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
