@@ -34,7 +34,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        ForexManager.shared.testSDKAcces()
         ForexManager.shared.testSDKForSwiftUI(navController: self.navigationController)
     }
 
