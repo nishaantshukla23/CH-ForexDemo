@@ -17,6 +17,9 @@
 		8E11004729EE6A4600B2CD13 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11003F29EE6A4600B2CD13 /* NetworkConfig.swift */; };
 		90F218B429EE6BFF0017A6B7 /* CurrencyConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F218B329EE6BFF0017A6B7 /* CurrencyConverterView.swift */; };
 		90F218B729EE6CC30017A6B7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F218B629EE6CC30017A6B7 /* StringExtension.swift */; };
+		EF30948F29F0FFF500513C95 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30948E29F0FFF500513C95 /* BundleExtension.swift */; };
+		EF30949229F1066300513C95 /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30949129F1066300513C95 /* NavigationHandler.swift */; };
+		EF30949429F10B6F00513C95 /* ForexSSLconfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30949329F10B6F00513C95 /* ForexSSLconfig.swift */; };
 		EF6F179C299A102100C0ED65 /* ForexSDK.docc in Sources */ = {isa = PBXBuildFile; fileRef = EF6F179B299A102100C0ED65 /* ForexSDK.docc */; };
 		EF6F17A2299A102100C0ED65 /* ForexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6F1797299A102100C0ED65 /* ForexSDK.framework */; };
 		EF6F17A7299A102100C0ED65 /* ForexSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F17A6299A102100C0ED65 /* ForexSDKTests.swift */; };
@@ -42,6 +45,9 @@
 		8E11003F29EE6A4600B2CD13 /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		90F218B329EE6BFF0017A6B7 /* CurrencyConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterView.swift; sourceTree = "<group>"; };
 		90F218B629EE6CC30017A6B7 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		EF30948E29F0FFF500513C95 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		EF30949129F1066300513C95 /* NavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
+		EF30949329F10B6F00513C95 /* ForexSSLconfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexSSLconfig.swift; sourceTree = "<group>"; };
 		EF6F1797299A102100C0ED65 /* ForexSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForexSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6F179A299A102100C0ED65 /* ForexSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForexSDK.h; sourceTree = "<group>"; };
 		EF6F179B299A102100C0ED65 /* ForexSDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ForexSDK.docc; sourceTree = "<group>"; };
@@ -81,12 +87,13 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		90F218B529EE6C800017A6B7 /* Utils */ = {
+		90F218B529EE6C800017A6B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				90F218B629EE6CC30017A6B7 /* StringExtension.swift */,
+				EF30948E29F0FFF500513C95 /* BundleExtension.swift */,
 			);
-			path = Utils;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		EF30947E29EE63C000513C95 /* UI */ = {
@@ -95,6 +102,14 @@
 				90F218B329EE6BFF0017A6B7 /* CurrencyConverterView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		EF30949029F1065100513C95 /* NavigationHandler */ = {
+			isa = PBXGroup;
+			children = (
+				EF30949129F1066300513C95 /* NavigationHandler.swift */,
+			);
+			path = NavigationHandler;
 			sourceTree = "<group>";
 		};
 		EF6F178D299A102100C0ED65 = {
@@ -137,7 +152,8 @@
 		EF6F17B1299A1A5300C0ED65 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				90F218B529EE6C800017A6B7 /* Utils */,
+				EF30949029F1065100513C95 /* NavigationHandler */,
+				90F218B529EE6C800017A6B7 /* Extensions */,
 				EF6F17B3299A1A6C00C0ED65 /* ForexManager */,
 				EF6F17B2299A1A5C00C0ED65 /* Configurations */,
 				8E11003B29EE6A4600B2CD13 /* Networking */,
@@ -149,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				EF6F17B6299A1B3500C0ED65 /* ForexConfig.swift */,
+				EF30949329F10B6F00513C95 /* ForexSSLconfig.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -270,11 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF30949229F1066300513C95 /* NavigationHandler.swift in Sources */,
 				8E11004429EE6A4600B2CD13 /* Endpoint.swift in Sources */,
 				90F218B729EE6CC30017A6B7 /* StringExtension.swift in Sources */,
 				EF6F17B7299A1B3500C0ED65 /* ForexConfig.swift in Sources */,
 				8E11004029EE6A4600B2CD13 /* NetworkClient.swift in Sources */,
 				EF6F17B5299A1AC000C0ED65 /* ForexManager.swift in Sources */,
+				EF30948F29F0FFF500513C95 /* BundleExtension.swift in Sources */,
+				EF30949429F10B6F00513C95 /* ForexSSLconfig.swift in Sources */,
 				EF6F179C299A102100C0ED65 /* ForexSDK.docc in Sources */,
 				90F218B429EE6BFF0017A6B7 /* CurrencyConverterView.swift in Sources */,
 				8E11004629EE6A4600B2CD13 /* NetworkConfig.swift in Sources */,
@@ -428,9 +448,11 @@
 		EF6F17AC299A102100C0ED65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5PX9DQ7F9D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -455,9 +477,11 @@
 		EF6F17AD299A102100C0ED65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5PX9DQ7F9D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
