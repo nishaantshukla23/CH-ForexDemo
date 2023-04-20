@@ -29,7 +29,7 @@ public final class ForexManager {
     
     //temporary function
     public func testSDKForSwiftUI(navController: UINavigationController?) {
-        let swiftUIViewController = UIHostingController(rootView: CurrencyConverterView())
+        let swiftUIViewController = UIHostingController(rootView: CurrencyConverterView(viewModel: CurrencyConverterViewModel(currencyConverterService: CurrencyConverterService())))
         navController?.pushViewController(swiftUIViewController, animated: true)
 
     }

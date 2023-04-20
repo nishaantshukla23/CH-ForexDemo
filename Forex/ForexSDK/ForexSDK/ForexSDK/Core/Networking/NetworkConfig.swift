@@ -8,17 +8,23 @@
 import Foundation
 
 enum NetworkConfig{
-    case randomFeed
+    case convert
 }
 
+
 extension NetworkConfig: Endpoint {
+    
+    var apiKey: String {
+        return "anpDuADtk0c7BpiRJI68oBNaxijKRxAL"
+    }
+    
     var base: String {
-        return "https://api.quotable.io"
+        return "https://api.apilayer.com"
     }
     
     var path: String{
         switch self {
-        case .randomFeed: return "/random"
+        case .convert: return "/exchangerates_data/convert"
         }
     }
 }

@@ -7,6 +7,19 @@
 
 import Foundation
 import Combine
+import UIKit
+
+enum HttpMethods: String {
+    case GET = "GET"
+    case HEAD = "HEAD"
+    case POST = "POST"
+    case PUT = "PUT"
+    case DELETE = "DELETE"
+    case CONNECT = "CONNECT"
+    case OPTIONS = "OPTIONS"
+    case TRACE = "TRACE"
+    case PATCH = "PATCH"
+}
 
 protocol CombineAPI {
     var session: URLSession {get}
@@ -14,6 +27,7 @@ protocol CombineAPI {
 }
 
 extension CombineAPI {
+    
     func execute<T>(_ request: URLRequest, decodingType: T.Type, queue: DispatchQueue = .main, retries: Int) -> AnyPublisher<T, Error> where T: Decodable {
         return session.dataTaskPublisher(for: request)
             .tryMap{
