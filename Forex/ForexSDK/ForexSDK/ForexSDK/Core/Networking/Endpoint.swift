@@ -8,24 +8,29 @@
 import Foundation
 
 protocol Endpoint {
-    
     var base: String { get }
     var path: String { get }
 }
+
 extension Endpoint {
     var apiKey: String {
-        return "api_key=34a92f7d77a168fdcd9a46ee1863edf1"
+        return "anpDuADtk0c7BpiRJI68oBNaxijKRxAL"
     }
+
     
     var urlComponents: URLComponents {
         var components = URLComponents(string: base)!
         components.path = path
-//        components.query = apiKey
+        components.queryItems = []
         return components
     }
     
-    var request: URLRequest {
+    var request: URLRequest {   
         let url = urlComponents.url!
-        return URLRequest(url: url)
+        var request = URLRequest(url: url,timeoutInterval: Double.infinity)
+        request.httpMethod = "GET"
+        request.addValue(apiKey, forHTTPHeaderField: "apikey")
+        return request
     }
+    
 }
