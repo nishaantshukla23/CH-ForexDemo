@@ -71,7 +71,7 @@ struct CurrencyConverterView: View {
                     VStack(alignment: .leading){
                         Text("To")
                         HStack{
-                            Text(viewModel.currencyConverter?.result.rounded(digits: 2).removeZerosFromEnd() ?? "0")
+                            Text(viewModel.currencyConverter?.result.rounded(digits: 2).removeZerosFromEnd() ?? "0")    
                             Spacer()
                             Picker(selection: $itemSelected2, label: Text("")){
                                 ForEach(0 ..< currencies.count, id: \.self){ index in
