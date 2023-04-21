@@ -143,24 +143,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		
 		90F218B529EE6C800017A6B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				90F218B629EE6CC30017A6B7 /* StringExtension.swift */,
 				EF30948E29F0FFF500513C95 /* BundleExtension.swift */,
-        90F218B629EE6CC30017A6B7 /* StringExtension.swift */,
+				90F218B629EE6CC30017A6B7 /* StringExtension.swift */,
 				8E990D7729F11FE000254886 /* UIApplicationExtension.swift */,
 				8E990D7929F123E400254886 /* DoubleExtension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		EF30947E29EE63C000513C95 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		EF30949029F1065100513C95 /* NavigationHandler */ = {
@@ -193,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				8E8E569129EEBD6600FD4066 /* CurrencyConverter */,
-				EF30947E29EE63C000513C95 /* UI */,
 				EF6F17B1299A1A5300C0ED65 /* Core */,
 				EF6F179A299A102100C0ED65 /* ForexSDK.h */,
 				EF6F179B299A102100C0ED65 /* ForexSDK.docc */,
