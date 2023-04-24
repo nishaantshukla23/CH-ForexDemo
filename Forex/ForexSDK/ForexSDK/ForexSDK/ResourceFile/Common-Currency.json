@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1001,
+        "code": "USD",
+        "isFavorite": true
+    },
+    {
+        "id": 1002,
+        "code": "EUR",
+        "isFavorite": false
+    },
+    {
+        "id": 1003,
+        "code": "GBP",
+        "isFavorite": true
+    }
+]
+ 

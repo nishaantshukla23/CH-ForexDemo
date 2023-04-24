@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct CurrencyConverterView: View {
-    @State private var itemSelected = 0
-    @State private var itemSelected2 = 1
-    @State private var amount : String = ""
-    private let currencies = ["USD", "EUR", "GBP"]
     
+    @State private var amount : String = ""
+    @State var isShowSheet = false
+    @State var isFromCode = false
+    @State var codeValueFrom: String = "USD"
+    @State var codeValueTo: String = "EUR"
     func convert(_ convert: String) -> String {
         var conversion: Double = 1.0
         let amount = Double(convert.doubleValue)
-        let selectedCurrency =  currencies[itemSelected]
-        let to = currencies[itemSelected2]
+        let selectedCurrency =  codeValueFrom
+        let to = codeValueTo
         let euroRates = ["USD": 1.15, "EUR": 1.0, "GBP": 0.84]
         let usdRates = ["USD": 1.0, "EUR": 0.87, "GBP": 0.73]
         let gbpRates = ["USD": 1.37, "EUR": 1.18, "GBP": 1.0]
@@ -36,9 +37,7 @@ struct CurrencyConverterView: View {
         
     }
     
-    
-    
-    var body: some View{
+     var body: some View{
         NavigationView{
             List {
                 Section(header: Text("Convert a currency")){
@@ -47,46 +46,54 @@ struct CurrencyConverterView: View {
                         HStack{
                             TextField("Enter an amount", text: $amount)
                                 .keyboardType(.decimalPad)
-                            Spacer()
-                            Picker(selection: $itemSelected, label: Text("")){
-                                ForEach(0 ..< currencies.count, id: \.self){ index in
-                                    Text(self.currencies[index]).tag(index)
-                                }
-                            }
-//navigationLink
-//                      NavigationLink(destination: CurrencyList()) {
-//                      Text("")
-//                            }
-                        }
-                        
+                            Button {
+                                    self.isShowSheet = true
+                                    self.isFromCode = true
+                            } label: {
+                                Text(codeValueFrom)
+                                .padding()
+                             }
+                         }
                     }
-                   Image(uiImage: UIImage(named: "exchangeCurrency")!)
-                            .resizable()
-                            .frame(width: 32.0, height: 32.0)
-                            .frame(maxWidth: .infinity, alignment: .center)
-                   
+                    .sheet(isPresented: $isShowSheet) {
+                        CurrencyList(isPresented: $isShowSheet, codeValueFrom: $codeValueFrom, codeValueTo: $codeValueTo, isFromcode: $isFromCode)
+                    }
+                    Image(uiImage: UIImage(named: "exchangeCurrency")!)
+                        .resizable()
+                        .frame(width: 32.0, height: 32.0)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                    
                     VStack(alignment: .leading){
                         Text("To")
                         HStack{
                             Text("\(convert(amount))")
                             Spacer()
-                            Picker(selection: $itemSelected2, label: Text("")){
-                                ForEach(0 ..< currencies.count, id: \.self){ index in
-                                    Text(self.currencies[index]).tag(index)
-                                }
+                            Button{
+                                self.isShowSheet = true
+                                self.isFromCode = false
+                            } label: {
+                                Text(codeValueTo)
+                                .padding()
                             }
+                           
                         }
-                        .foregroundColor(.blue)
+                        
                     }
-                  }.listRowSeparatorTint(.white)
-               }
-             }
+                    .sheet(isPresented: $isShowSheet) {
+                        CurrencyList(isPresented: $isShowSheet, codeValueFrom: $codeValueFrom, codeValueTo: $codeValueTo, isFromcode: $isFromCode)
+                            .environmentObject(CurrencyModelData())
+                    }
+                }.listRowSeparatorTint(.white)
+            }
+            
+        }
+        
     }
     
-}
-
-struct CurrencyConverterView_Previews: PreviewProvider {
-    static var previews: some View {
-        CurrencyConverterView()
+    struct CurrencyConverterView_Previews: PreviewProvider {
+        static var previews: some View {
+            CurrencyConverterView()
+                
+        }
     }
 }

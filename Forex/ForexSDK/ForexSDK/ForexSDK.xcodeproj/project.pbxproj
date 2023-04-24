@@ -17,6 +17,12 @@
 		8E11004729EE6A4600B2CD13 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11003F29EE6A4600B2CD13 /* NetworkConfig.swift */; };
 		90F218B429EE6BFF0017A6B7 /* CurrencyConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F218B329EE6BFF0017A6B7 /* CurrencyConverterView.swift */; };
 		90F218B729EE6CC30017A6B7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F218B629EE6CC30017A6B7 /* StringExtension.swift */; };
+		90F218EA29F295D60017A6B7 /* CurrencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F218E929F295D60017A6B7 /* CurrencyList.swift */; };
+		90F218EF29F295F00017A6B7 /* CurrencyModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F218EB29F295EF0017A6B7 /* CurrencyModelData.swift */; };
+		90F218F029F295F00017A6B7 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F218EC29F295EF0017A6B7 /* FavoriteButton.swift */; };
+		90F218F129F295F00017A6B7 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F218ED29F295EF0017A6B7 /* CurrencyModel.swift */; };
+		90F218F229F295F00017A6B7 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F218EE29F295EF0017A6B7 /* CurrencyCell.swift */; };
+		90F218F429F295F90017A6B7 /* Common-Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 90F218F329F295F90017A6B7 /* Common-Currency.json */; };
 		EF6F179C299A102100C0ED65 /* ForexSDK.docc in Sources */ = {isa = PBXBuildFile; fileRef = EF6F179B299A102100C0ED65 /* ForexSDK.docc */; };
 		EF6F17A2299A102100C0ED65 /* ForexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6F1797299A102100C0ED65 /* ForexSDK.framework */; };
 		EF6F17A7299A102100C0ED65 /* ForexSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F17A6299A102100C0ED65 /* ForexSDKTests.swift */; };
@@ -42,6 +48,12 @@
 		8E11003F29EE6A4600B2CD13 /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		90F218B329EE6BFF0017A6B7 /* CurrencyConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterView.swift; sourceTree = "<group>"; };
 		90F218B629EE6CC30017A6B7 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		90F218E929F295D60017A6B7 /* CurrencyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyList.swift; sourceTree = "<group>"; };
+		90F218EB29F295EF0017A6B7 /* CurrencyModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyModelData.swift; sourceTree = "<group>"; };
+		90F218EC29F295EF0017A6B7 /* FavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		90F218ED29F295EF0017A6B7 /* CurrencyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		90F218EE29F295EF0017A6B7 /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		90F218F329F295F90017A6B7 /* Common-Currency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Common-Currency.json"; sourceTree = "<group>"; };
 		EF6F1797299A102100C0ED65 /* ForexSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForexSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6F179A299A102100C0ED65 /* ForexSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForexSDK.h; sourceTree = "<group>"; };
 		EF6F179B299A102100C0ED65 /* ForexSDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ForexSDK.docc; sourceTree = "<group>"; };
@@ -89,10 +101,30 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		90F218F729F2BCB10017A6B7 /* ResourceFile */ = {
+			isa = PBXGroup;
+			children = (
+				90F218F329F295F90017A6B7 /* Common-Currency.json */,
+			);
+			path = ResourceFile;
+			sourceTree = "<group>";
+		};
+		90F218F829F2BD360017A6B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90F218ED29F295EF0017A6B7 /* CurrencyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EF30947E29EE63C000513C95 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				90F218B329EE6BFF0017A6B7 /* CurrencyConverterView.swift */,
+				90F218E929F295D60017A6B7 /* CurrencyList.swift */,
+				90F218EB29F295EF0017A6B7 /* CurrencyModelData.swift */,
+				90F218EC29F295EF0017A6B7 /* FavoriteButton.swift */,
+				90F218EE29F295EF0017A6B7 /* CurrencyCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -118,6 +150,8 @@
 		EF6F1799299A102100C0ED65 /* ForexSDK */ = {
 			isa = PBXGroup;
 			children = (
+				90F218F829F2BD360017A6B7 /* Model */,
+				90F218F729F2BCB10017A6B7 /* ResourceFile */,
 				EF30947E29EE63C000513C95 /* UI */,
 				EF6F17B1299A1A5300C0ED65 /* Core */,
 				EF6F179A299A102100C0ED65 /* ForexSDK.h */,
@@ -253,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F218F429F295F90017A6B7 /* Common-Currency.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,14 +305,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F218EF29F295F00017A6B7 /* CurrencyModelData.swift in Sources */,
 				8E11004429EE6A4600B2CD13 /* Endpoint.swift in Sources */,
 				90F218B729EE6CC30017A6B7 /* StringExtension.swift in Sources */,
+				90F218F229F295F00017A6B7 /* CurrencyCell.swift in Sources */,
+				90F218F029F295F00017A6B7 /* FavoriteButton.swift in Sources */,
 				EF6F17B7299A1B3500C0ED65 /* ForexConfig.swift in Sources */,
 				8E11004029EE6A4600B2CD13 /* NetworkClient.swift in Sources */,
 				EF6F17B5299A1AC000C0ED65 /* ForexManager.swift in Sources */,
 				EF6F179C299A102100C0ED65 /* ForexSDK.docc in Sources */,
+				90F218F129F295F00017A6B7 /* CurrencyModel.swift in Sources */,
 				90F218B429EE6BFF0017A6B7 /* CurrencyConverterView.swift in Sources */,
 				8E11004629EE6A4600B2CD13 /* NetworkConfig.swift in Sources */,
+				90F218EA29F295D60017A6B7 /* CurrencyList.swift in Sources */,
 				8E11004229EE6A4600B2CD13 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
