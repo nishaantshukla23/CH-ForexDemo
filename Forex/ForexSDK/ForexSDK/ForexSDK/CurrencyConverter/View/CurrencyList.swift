@@ -18,20 +18,19 @@ struct CurrencyList: View {
         List{
             ForEach(codes.currencies, id: \.self) { currency in
                 Button {
-                        if (isFromcode == true){
-                                (codeValueFrom = currency.code)
-                            }else{
-                                (codeValueTo = currency.code)
-                            }
-                                isPresented = false
-                            } label: {
-                                CurrencyCell(currency: currency)
-
+                    if (isFromcode == true){
+                        (codeValueFrom = currency.code)
+                    }else{
+                        (codeValueTo = currency.code)
                     }
-             }
+                    isPresented = false
+                } label: {
+                    CurrencyCell(currency: currency)
+                    
+                }
+            }
         }
         .navigationTitle("Currency Code")
-        
     }
 }
 

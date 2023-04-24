@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E657C5E29F665BD004DC7DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6F1766299A0CFE00C0ED65 /* Assets.xcassets */; };
 		EF6F1765299A0CFE00C0ED65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6F1763299A0CFE00C0ED65 /* Main.storyboard */; };
-		EF6F1767299A0CFE00C0ED65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6F1766299A0CFE00C0ED65 /* Assets.xcassets */; };
 		EF6F176A299A0CFE00C0ED65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6F1768299A0CFE00C0ED65 /* LaunchScreen.storyboard */; };
 		EF6F1775299A0CFF00C0ED65 /* ForexDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F1774299A0CFF00C0ED65 /* ForexDemoTests.swift */; };
 		EF6F177F299A0CFF00C0ED65 /* ForexDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F177E299A0CFF00C0ED65 /* ForexDemoUITests.swift */; };
@@ -317,7 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6F176A299A0CFE00C0ED65 /* LaunchScreen.storyboard in Resources */,
-				EF6F1767299A0CFE00C0ED65 /* Assets.xcassets in Resources */,
+				8E657C5E29F665BD004DC7DD /* Assets.xcassets in Resources */,
 				EF6F1765299A0CFE00C0ED65 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
