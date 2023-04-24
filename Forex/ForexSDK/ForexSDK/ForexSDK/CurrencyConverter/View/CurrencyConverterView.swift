@@ -9,11 +9,15 @@ import SwiftUI
 
 struct CurrencyConverterView: View {
     
+    
     @ObservedObject var viewModel: CurrencyConverterViewModel
     @State private var itemSelected = 0
     @State private var itemSelected2 = 1
     @State private var amount : String = ""
-    private let currencies = ["USD", "EUR", "GBP"]
+    @State var isShowSheet = false
+    @State var isFromCode = false
+    @State var codeValueFrom: String = "USD"
+    @State var codeValueTo: String = "EUR"
     @FocusState private var focusedField: Field?
     private enum Field: Int, CaseIterable {
         case amount
@@ -21,8 +25,8 @@ struct CurrencyConverterView: View {
     }
     
     func convert() {
-        let from =  currencies[itemSelected]
-        let to = currencies[itemSelected2]
+        let from =  codeValueFrom
+        let to = codeValueTo
         if !amount.isEmpty{
             viewModel.convertCurrency(
                 request: CurrencyConverterRequest(
@@ -34,59 +38,66 @@ struct CurrencyConverterView: View {
     }
     
     var body: some View{
-        NavigationView{
-            List {
-                Section(header: Text("Convert a currency")){
-                    VStack(alignment: .leading){
-                        Text("From")
-                        HStack{
-                            TextField("Enter an amount", text: $amount)
-                                .keyboardType(.decimalPad)
-                                .focused($focusedField, equals: .amount)
-                                .toolbar {
-                                    ToolbarItem(placement: .keyboard) {
-                                        Button("Done") {
-                                            focusedField = nil
-                                            convert()
-                                        }
+        VStack {
+            VStack(alignment: .center) {
+                VStack(alignment: .leading){
+                    Text("From")
+                    HStack{
+                        TextField("Enter an amount", text: $amount)
+                            .keyboardType(.decimalPad)
+                            .focused($focusedField, equals: .amount)
+                            .toolbar {
+                                ToolbarItem(placement: .keyboard) {
+                                    Button("Done") {
+                                        focusedField = nil
+                                        convert()
                                     }
                                 }
-                            Spacer()
-                            Picker(selection: $itemSelected, label: Text("")){
-                                ForEach(0 ..< currencies.count, id: \.self){ index in
-                                    Text(self.currencies[index]).tag(index)
-                                }
                             }
-                            .onChange(of: itemSelected) { newValue in
+                        Button {
+                            self.isShowSheet = true
+                            self.isFromCode = true
+                        } label: {
+                            Text(codeValueFrom)
+                                .padding()
+                        }
+                    }
+                }
+                Image(uiImage: UIImage(named: "exchangeCurrency") ?? UIImage())
+                    .resizable()
+                    .frame(width: 32.0, height: 32.0)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                VStack(alignment: .leading){
+                    HStack{
+                        Text(viewModel.currencyConverter?.result.rounded(digits: 2).removeZerosFromEnd() ?? "0")
+                        Spacer()
+                        Button{
+                            self.isShowSheet = true
+                            self.isFromCode = false
+                        } label: {
+                            Text(codeValueTo)
+                                .padding()
+                        }
+                        .sheet(isPresented: $isShowSheet, onDismiss: {
+                            if !isShowSheet {
                                 convert()
                             }
+                        }) {
+                            CurrencyList(isPresented: $isShowSheet, codeValueFrom: $codeValueFrom, codeValueTo: $codeValueTo, isFromcode: $isFromCode)
+                                .environmentObject(CurrencyModelData())
                         }
-                        
                     }
-                    Image(uiImage: UIImage(named: "exchangeCurrency") ?? UIImage()  )
-                        .resizable()
-                        .frame(width: 32.0, height: 32.0)
-                        .frame(maxWidth: .infinity, alignment: .center)
-                    
-                    VStack(alignment: .leading){
-                        Text("To")
-                        HStack{
-                            Text(viewModel.currencyConverter?.result.rounded(digits: 2).removeZerosFromEnd() ?? "0")    
-                            Spacer()
-                            Picker(selection: $itemSelected2, label: Text("")){
-                                ForEach(0 ..< currencies.count, id: \.self){ index in
-                                    Text(self.currencies[index]).tag(index)
-                                }
-                            }
-                            .onChange(of: itemSelected2) { newValue in
-                                convert()
-                            }
-                        }
-                        .foregroundColor(.blue)
-                    }
-                }.listRowSeparatorTint(.white)
+                }
             }
+            .padding(.all, 10.0)
+            .background(Color.white)
+            .cornerRadius(8.0)
+            .shadow(color: Color.gray.opacity(0.3), radius: 2.0)
         }
+        .padding(.all, 10.0)
+        Spacer()
+            .navigationTitle("Currency Converter")
+            .navigationBarTitleDisplayMode(.large)
     }
 }
 
