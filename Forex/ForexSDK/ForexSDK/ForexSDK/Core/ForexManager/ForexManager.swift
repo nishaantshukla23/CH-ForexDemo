@@ -7,18 +7,33 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 
 public final class ForexManager {
     
     // MARK: Public Interface
     public static let shared = ForexManager()
+    
+    // MARK: Private scope
+    private var navigationHandler: NavigationHandler {
+        return NavigationHandler.shared
+    }
+    
+    var forexConfig: ForexConfig?
+    
+    weak var hostAppTopViewController: UIViewController?
+    var isUserLoggedIn: Bool {
+        return true
+    }
+    
     //temporary function
-    public func testSDKAcces() {
-        let alert = UIAlertController(title: "Hello, I am ForexSDK", message: "you got the access.", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
-        let window = UIApplication.shared.windows.first
-        let controller = window?.rootViewController
-        controller?.present(alert, animated: true)
+    public func testSDKForSwiftUI(navController: UINavigationController?) {
+        let swiftUIViewController = UIHostingController(rootView: CurrencyConverterView(viewModel: CurrencyConverterViewModel(currencyConverterService: CurrencyConverterService())))
+        navController?.pushViewController(swiftUIViewController, animated: true)
+
     }
 }
+
+
+

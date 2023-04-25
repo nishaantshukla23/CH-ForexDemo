@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var forexTableView: UITableView!
 
     // MARK: - Variables
-    let titleArray = ["Forex", "Send Money", "Bill Pay","Loans", "UPI Payments"]
+    let titleArray = ["Forex", "Send Money", "Bill Pay","Loans", "UPI Payments", "Other"]
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        ForexManager.shared.testSDKAcces()
+        ForexManager.shared.testSDKForSwiftUI(navController: self.navigationController)
     }
 
     
